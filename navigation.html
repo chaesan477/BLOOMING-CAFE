@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blooming</title>
+  <!-- logo 사진 -->
+  <link rel="icon" href="title logo.png">
+</head>
+<style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+   .logo {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      background-color: #5F5E5B;
+    }
+
+    /* 햄버거 메뉴를 감싸는 div */
+    .menu-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    /* 삼선 아이콘 (햄버거 메뉴) */
+    .three-icon {
+      width: 70px;
+      cursor: pointer;
+    }
+
+    /* 헤더 가운데 로고 */
+    .center-logo {
+      height: 60px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .menu-box {
+  position: absolute;
+  top: -43px;
+  left: -30px;
+  background-color: #5F5E5B;
+  border: 1px solid rgb(90, 86, 86);
+  box-shadow: 0 4px 8px rgba(145, 126, 126, 0.1);
+  flex-direction: column;
+  z-index: 100;
+  padding: 72px 0;
+  min-width: 200px;
+  letter-spacing: 5px;
+  line-height: 6em;
+  transform: translateX(-20px);      /* 처음에 살짝 숨겨둠 */
+  opacity: 0;                        /* 안 보이게 */
+  pointer-events: none;             /* 클릭 방지 */
+  transition: transform 1S ease, opacity 1s ease;
+  display: flex;                    /* 항상 자리는 차지 */
+}
+
+
+    /* 메뉴 항목의 링크 스타일 */
+    .menu-box a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+    }
+
+    /* 메뉴 항목에 마우스 올렸을 때 효과 */
+    .menu-box a:hover {
+      background-color: gray;
+      opacity: 10; /* 이 부분은 무의미하므로 제거 권장 */
+      transition: all 0.5 ease; /* ease 뒤에 시간 단위 누락: '0.5s ease'로 수정 필요 */
+    }
+
+    /* 마우스를 menu-wrapper에 올리면 menu-box 표시 */
+    .menu-wrapper:hover .menu-box {
+  transform: translateX(0);     /* 왼쪽에서 자연스럽게 등장 */
+  opacity: 1;                   /* 완전히 보이게 */
+  pointer-events: auto;        /* 클릭 가능하게 */
+}
+
+.intro {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.intro1 {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.intro2 {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+</style>
+<body>
+  <div class="logo">
+    <!-- 삼선 메뉴와 메뉴 항목들 -->
+    <div class="menu-wrapper">
+      <img src="three-icon.gif" alt="메뉴" class="three-icon">
+      <div class="menu-box">
+        <a href="./index.html">홈</a>
+        <a href="./blooming menu.html">메뉴</a>
+         
+        <a href="./navigation.html">오시는 길</a>
+        
+        
+      </div>
+    </div>
+    <!-- 가운데 로고 이미지 -->
+    <img src="logo.png" alt="이미지 없음" class="center-logo">
+  </div>
+
+  <!-- 소개글 -->
+   <div class="intro">
+      <p>
+        <strong>
+          <i>오직커피를 위한 향기롭고 따뜻한 공간, 블루밍<br></i>
+        </strong>  
+      </p>
+   </div>
+   <div class="intro1">
+      <p>
+        <strong>
+          <i>전남 순천 원용당길에 피어난 '블루밍 카페'<br>
+          하루의 시작과 끝을 향기롭게 감싸주는
+          감성 가득한 카페가 여러분을 기다립니다.</i>
+        </strong>  
+      </p>
+   </div>
+
+   <div class="intro1">
+    <img src="subpage1.png" alt="이미지없음">
+   </div>
+
+   <div class="intro2">
+      <p>
+        <strong>
+          <i>
+            넓은 창으로 햇살이 스며들고<br>
+            진정한 음악과 향긋한 커피 내음이 어우러지는 <br>
+            이곳은 잠시 멈춰 숨 고르기에 딱 좋은 쉼의 공간입니다
+          </i>
+        </strong>  
+      </p>
+   </div>
+   <div class="intro2">
+      <p>
+        <strong>
+          <i>
+            단체 모임부터 조용한 혼자만의 시간까지<br>
+            누구든, 어떤 방식으로든 머물 수 있는 곳
+          </i>
+        </strong>  
+      </p>
+   </div>
+   
+   <div class="intro1">
+    <img src="subpage2.png" alt="이미지없음">
+   </div>
+
+   <div class="intro2">
+      <p>
+        <strong>
+          <i>
+            매일 오전 10시부터 밤 10시 30분까지<br>
+            커피 한 잔, 여유 한 모금이 필요한 모든 순간 <br>
+            블루밍에서 피어나는 따뜻한 하루를 경험해보세요
+          </i>
+        </strong>  
+      </p>
+   </div>
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin-top: 80px;">
+  <h1>
+    LOCATION <br>
+     찾아오시는길 
+
+  </h1>
+
+     
+  
+  <iframe charset="UTF-8" class="daum_roughmap_loader_script" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26155.134858673755!2d127.45133607431639!3d34.97184819999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356e0f46027867e9%3A0x8964b7093b60b4c3!2z67iU66Oo67CNIOy5tO2OmA!5e0!3m2!1sko!2skr!4v1751961385862!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+
+  </script>
+</div>
+
+<footer style="width: 100%; height: 270px; background-color: #4d4d4d; color: white; display: flex; flex-direction: column; justify-content: space-between; padding: 30px 50px; box-sizing: border-box; margin-top: 50px;">
+    
+    <!-- 링크 메뉴 (오시는 길, 전화번호 등) -->
+    <div style="display: flex; gap: 40px; font-size: 18px; border-bottom: 3px solid white; padding-bottom: 10px;">
+      <div><a href="./index.html" style="text-decoration: none; color: white; " target="_blank">홈</a></div>
+      
+      <div><a href="./blooming menu.html" style="text-decoration: none; color: white; " target="_blank">메뉴</a></div>
+       
+      <div><a href="./navigation.html" style="text-decoration: none; color: white; " target="_blank">오시는 길</a></div>
+    </div>
+
+    <!-- 사업자 정보 및 로고 -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+      <div style="line-height: 2; font-size: 18px;">
+        <div>상호 : cafe blooming</div>
+        <div>Tel : 061-754-0095</div>
+        <div>주소 : 전남 순천시 원용당길 2</div>
+      </div>
+      <div>
+        <img src="logo.png" alt="CAFE BLOOMING 로고" style="height: 80px;">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

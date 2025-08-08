@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blooming Cafe</title>
+  <link rel="icon" href="title logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nanum+Myeongjo&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nanum Myeongjo', serif;
+      background-color: #fffdf9;
+      color: #333;
+    }
+
+    .background {
+      height: 800px;
+    }
+
+    .logo {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      background-color: #5F5E5B;
+    }
+
+    .menu-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .three-icon {
+      width: 70px;
+      cursor: pointer;
+    }
+
+    .menu-box {
+      position: absolute;
+      top: -43px;
+      left: -30px;
+      background-color: #5F5E5B;
+      border: 1px solid rgb(90, 86, 86);
+      box-shadow: 0 4px 8px rgba(145, 126, 126, 0.1);
+      flex-direction: column;
+      z-index: 100;
+      padding: 72px 0;
+      min-width: 200px;
+      letter-spacing: 5px;
+      line-height: 6em;
+      transform: translateX(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 1s ease, opacity 1s ease;
+      display: flex;
+    }
+
+    .menu-box a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .menu-box a:hover {
+      background-color: gray;
+    }
+
+    .menu-wrapper:hover .menu-box {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .center-logo {
+      height: 60px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .sub-image {
+      width: 100%;
+      margin-top: 120px;
+    }
+
+    .sub-image > img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .sub-image > p {
+      font-size: 1.8em;
+      margin-top: -100px;
+      text-align: center;
+      color: white;
+    }
+
+    .menu-container1 {
+      margin-top: 150px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item img {
+      width: 250px;
+      height: 300px;
+      border: 1px solid #ccc;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .menu-name {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 150px 0;
+    }
+
+    .section-title hr {
+      margin: 0 150px 0 150px;
+      flex-grow: 1;
+      height: 2px;
+      background-color: black;
+      border: none;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 900px;
+      background-color: #fff;
+      margin-top: 100px;
+      margin-left: 26.5%;
+    }
+
+    .search-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      margin-bottom: 20px;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .menu-card {
+      width: 110px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #fafafa;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="logo">
+    <div class="menu-wrapper">
+      <img src="three-icon.gif" alt="메뉴" class="three-icon">
+      <div class="menu-box">
+        <a href="./index.html">홈</a>
+        <a href="./blooming menu.html">메뉴</a>
+        <a href="./navigation.html">오시는 길</a>
+      </div>
+    </div>
+    <img src="logo.png" alt="로고" class="center-logo">
+  </div>
+
+  <div class="sub-image">
+    <img src="subimage.jpg" alt="서브 이미지">
+    <p>정원의 도시 순천 베이커리 루프탑 카페 blooming cafe</p>
+  </div>
+
+  <div class="section-title">
+    <hr>
+    <h2>추천 상품</h2>
+    <hr>
+  </div>
+
+  <div class="background">
+    <div class="menu-container1">
+      <div class="menu-item">
+        <img src="americano.jpeg" alt="메뉴1">
+        <div class="menu-name">아메리카노</div>
+      </div>
+      <div class="menu-item">
+        <img src="grapefruit.jpeg" alt="메뉴2">
+        <div class="menu-name">자몽에이드</div>
+      </div>
+      <div class="menu-item">
+        <img src="chocolate.jpeg" alt="메뉴3">
+        <div class="menu-name">초코라떼</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="search-row">
+        <label>Menu Search</label>
+        
+      </div>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" onchange="toggleMenu('coffee', event)"> NON-COFFEE</label>
+        <label><input type="checkbox" onchange="toggleMenu('bubble', event)"> BUBBLE TEA</label>
+        <label><input type="checkbox" onchange="toggleMenu('tea', event)"> TEA </label>
+        <label><input type="checkbox" onchange="toggleMenu('ade', event)"> ADE</label>
+        <label><input type="checkbox" onchange="toggleMenu('juice', event)"> JUICE</label>
+      </div>
+
+      <div class="menu-container" id="menuContainer">
+        <!-- 글자만 있는 카드 출력 -->
+      </div>
+    </div>
+  </div>
+  
+  <footer style="width: 100%; height: 270px; background-color: #4d4d4d; color: white; display: flex; flex-direction: column; justify-content: space-between; padding: 30px 50px; box-sizing: border-box; margin-top: 300px;">
+    <div style="display: flex; gap: 40px; font-size: 18px; border-bottom: 3px solid white; padding-bottom: 10px;">
+      <div><a href="./index.html" style="text-decoration: none; color: white;" target="_blank">홈</a></div>
+      <div><a href="./blooming menu.html" style="text-decoration: none; color: white;" target="_blank">메뉴</a></div>
+      <div><a href="./navigation.html" style="text-decoration: none; color: white;" target="_blank">오시는 길</a></div>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+      <div style="line-height: 2; font-size: 18px;">
+        <div>상호 : cafe blooming</div>
+        <div>Tel : 061-754-0095</div>
+        <div>주소 : 전남 순천시 원용당길 2</div>
+      </div>
+      <div>
+        <img src="logo.png" alt="CAFE BLOOMING 로고" style="height: 80px;">
+      </div>
+    </div>
+  </footer>
+
+<script>
+  const menus = {
+    coffee: [
+      { name: "모링가 라떼" },
+      { name: "고구마라떼" },
+      { name: "녹차라떼" },
+      { name: "초코라떼" },
+      { name: "패션후르츠 아이스티" }
+      
+    ],
+    tea: [
+      { name: "블랙티" },
+      { name: "허브티" },
+      { name: "라임차" },
+      { name: "자몽차" },
+      { name: "레몬차" }
+    ],
+    bubble: [
+      { name: "블랙 버블티" },
+      { name: "타로 버블티" },
+      { name: "초코 버블티" },
+      { name: "말차 버블티" },
+      { name: "모링가 버블티" }
+    ],
+    ade: [
+      { name: "레몬에이드" },
+      { name: "자몽에이드" },
+      { name: "청포도에이드" },
+      { name: "라임에이드" },
+      { name: "망고요구르트에이드" }
+    ],
+    juice: [
+      { name: "키위주스" },
+      { name: "바나나주스" },
+      { name: "오렌지자몽주스" },
+      { name: "망고바나나주스" },
+      { name: "딸기바나나주스" }
+    ]
+  };
+
+  function toggleMenu(category, event) {
+    const container = document.getElementById('menuContainer');
+    const checkBox = event.target;
+
+    if (checkBox.checked) {
+      menus[category].forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'menu-card';
+        card.setAttribute('data-category', category);
+        card.innerHTML = `<div>${item.name}</div>`;
+        container.appendChild(card);
+      });
+    } else {
+      document.querySelectorAll(`.menu-card[data-category="${category}"]`).forEach(el => el.remove());
+    }
+  }
+</script>
+
+</body>
+</html>
